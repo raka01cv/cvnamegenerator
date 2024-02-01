@@ -1,0 +1,40 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input.letter
+{
+    width: 10px;
+    border: 1px solid black;
+}
+
+#imageContainer {
+    width: 1200px;
+    height: 300px;
+    background-image:url('images/display_field.jpg'); 
+    margin-top: 20px;
+}
+
+img {
+    width: 100px;
+    margin-top: 60px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
