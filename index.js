@@ -15,6 +15,26 @@ function generateImages() {
     });
 }
 
+function captureScreenshot() {
+    const container = document.getElementById('imageContainer');
 
+    html2canvas(container).then(canvas => {
+        const imageUrl = canvas.toDataURL();
+
+        if (imageUrl) {
+            const link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = 'screenshot.png';
+
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } else {
+            console.error('Image URL is empty.');
+        }
+    }).catch(error => {
+        console.error('An error occurred while capturing the screenshot:', error);
+    });
+}
 
 
