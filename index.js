@@ -34,23 +34,16 @@ function generateImages() {
     });
 }
 
-function captureScreenshot() {
+ffunction captureScreenshot() {
     const container = document.getElementById('imageContainer');
 
     html2canvas(container).then(canvas => {
         const imageUrl = canvas.toDataURL();
 
         if (imageUrl) {
-            // Construct filename based on input values
-            let filename = 'screenshot_';
-            inputLetters.forEach(input => {
-                filename += input.value.toLowerCase();
-            });
-            filename += '.png';
-
             const link = document.createElement('a');
             link.href = imageUrl;
-            link.download = filename;
+            link.download = 'screenshot.png';
 
             document.body.appendChild(link);
             link.click();
