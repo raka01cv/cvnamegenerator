@@ -41,9 +41,16 @@ function captureScreenshot() {
         const imageUrl = canvas.toDataURL();
 
         if (imageUrl) {
+            // Construct filename based on input values
+            let filename = 'screenshot_';
+            inputLetters.forEach(input => {
+                filename += input.value.toLowerCase();
+            });
+            filename += '.png';
+
             const link = document.createElement('a');
             link.href = imageUrl;
-            link.download = 'screenshot.png';
+            link.download = filename;
 
             document.body.appendChild(link);
             link.click();
@@ -55,5 +62,6 @@ function captureScreenshot() {
         console.error('An error occurred while capturing the screenshot:', error);
     });
 }
+
 
 
