@@ -41,13 +41,20 @@ function captureScreenshot() {
         const imageUrl = canvas.toDataURL();
 
         if (imageUrl) {
+            // Construct filename based on input values
+            let filename = 'screenshot_';
+            inputLetters.forEach(input => {
+                filename += input.value.toLowerCase();
+            });
+            filename += '.png';
+
+            // Create a temporary link element to trigger download
             const link = document.createElement('a');
             link.href = imageUrl;
-            link.download = 'screenshot.png';
+            link.download = filename;
 
-            document.body.appendChild(link);
+            // Trigger download
             link.click();
-            document.body.removeChild(link);
         } else {
             console.error('Image URL is empty.');
         }
@@ -55,6 +62,7 @@ function captureScreenshot() {
         console.error('An error occurred while capturing the screenshot:', error);
     });
 }
+
 
 
 
