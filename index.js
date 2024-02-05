@@ -42,7 +42,7 @@ function captureScreenshot() {
 
         if (imageUrl) {
             // Construct filename based on input values
-            let filename = 'screenshot_';
+            let filename = 'CellaVision_';
             inputLetters.forEach(input => {
                 filename += input.value.toLowerCase();
             });
