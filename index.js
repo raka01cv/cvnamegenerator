@@ -34,7 +34,7 @@ function generateImages() {
     });
 }
 
-ffunction captureScreenshot() {
+function captureScreenshot() {
     const container = document.getElementById('imageContainer');
 
     html2canvas(container).then(canvas => {
