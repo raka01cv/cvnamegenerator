@@ -58,6 +58,13 @@ img {
   outline: 0;
 }
 
+.button:hover {
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #243d66;
+  color: #243d66;
+}
+
 .button2 {
     margin-top: 15px;
   align-items: center;
@@ -76,4 +83,11 @@ img {
 .button2:focus {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
+}
+
+.button2:hover {
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #243d66;
+  color: #243d66;
 }
